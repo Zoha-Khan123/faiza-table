@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Route for table generation
-app.get('/table', (req, res) => {
+app.get('/', (req, res) => {
     const number = parseInt(req.query.num);
     res.render('table', { num: number });
 });
